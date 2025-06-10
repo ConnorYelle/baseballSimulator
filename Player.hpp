@@ -2,6 +2,7 @@
 #define PLAYER_H
 
 #include <string>
+#include <vector>
 
 class Player {
     private:
@@ -10,10 +11,15 @@ class Player {
         int number;
         std::string primaryPosition;
         std::string secondaryPosition;
+        Player(const std::string& firstName, const std::string& lastName, const int number);
+        static std::vector<std::string> randomName();
 
     public:
-        Player(const std::string& firstName, const std::string& lastName, const int number);
+        Player CreateNewPlayer(const std::string& firstName, const std::string& lastName, const int number);
+        static Player CreateNewPlayer(); //uses RandomName();
         ~Player();
+
+        friend std::ostream& operator<<(std::ostream& os, const Player& player);
 
 };
 
