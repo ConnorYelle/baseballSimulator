@@ -9,6 +9,7 @@
                 "-g",
                 "${workspaceFolder}/main.cpp",
                 "${workspaceFolder}/Player.cpp",
+                "${workspaceFolder}/Team.cpp",
                 "-o",
                 "${workspaceFolder}/main.exe"
             ],

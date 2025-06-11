@@ -3,16 +3,18 @@
 #include <string>
 #include <ctime>
 #include "Player.hpp"
+#include "Team.hpp"
 using namespace std;
 
 int main() {
     srand(time(0));
 
-    Player player1 = Player::CreateNewPlayer();
-    Player player2 = Player::CreateNewPlayer();
-
-    std::cout << player1 << std::endl;
-    std::cout << player2 << std::endl;
-
+    Team team1 = Team("Toronto", "Huskies");
+    team1.createRoster();
+    int index = 0;
+    while(index < team1.getMaxSize()){
+        cout << team1.getRoster().at(index) << "\n";
+        index++;
+    }
     return 0;
 }
