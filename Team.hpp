@@ -3,22 +3,25 @@
 
 #include <vector>
 #include "Player.hpp"
+using namespace std;
 
 class Team {
     private:
-        std::vector<Player> roster;
-        std::string City;
-        std::string Name;
+        vector<Player> roster;
+        string City;
+        string Name;
         const int MAX_ROSTER_SIZE = 30;
 
     public:
         Team();
-        Team(std::string City, std::string Name);
+        Team(string City, string Name);
         void createRoster();
         int getSize();
         int getMaxSize();
-        std::vector<Player> getRoster();
-
+        vector<Player> getRoster();
+        vector<string> randomTeamName();
+        void printRoster();
+        
         //~Team();
 };
 

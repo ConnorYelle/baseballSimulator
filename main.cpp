@@ -11,10 +11,7 @@ int main() {
 
     Team team1 = Team("Toronto", "Huskies");
     team1.createRoster();
-    int index = 0;
-    while(index < team1.getMaxSize()){
-        cout << team1.getRoster().at(index) << "\n";
-        index++;
-    }
+    team1.printRoster();
     return 0;
 }
+   
