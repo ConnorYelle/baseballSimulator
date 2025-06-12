@@ -19,8 +19,8 @@ class Team {
         int getSize();
         int getMaxSize();
         vector<Player> getRoster();
-        vector<string> randomTeamName();
         void printRoster();
+        void printTeamName();
         
         //~Team();
 };

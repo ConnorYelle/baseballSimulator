@@ -10,6 +10,7 @@
                 "${workspaceFolder}/main.cpp",
                 "${workspaceFolder}/Player.cpp",
                 "${workspaceFolder}/Team.cpp",
+                "${workspaceFolder}/League.cpp",
                 "-o",
                 "${workspaceFolder}/main.exe"
             ],

@@ -10,4 +10,5 @@ class League{
     public:
         League();
         League(int teamNumber);
+        void listTeams();
 };

@@ -4,14 +4,13 @@
 #include <ctime>
 #include "Player.hpp"
 #include "Team.hpp"
+#include "League.hpp"
 using namespace std;
 
 int main() {
     srand(time(0));
-
-    Team team1 = Team("Toronto", "Huskies");
-    team1.createRoster();
-    team1.printRoster();
+    League MLB = League(30);
+    MLB.listTeams();
     return 0;
 }
    
