@@ -10,9 +10,10 @@ class Player {
         std::string lastName;
         int number;
         int rating;
+        int stats[7]; //Contact R, Contact L, Power R, Power L, Accuracy, Speed, Discipline
         std::string primaryPosition;
         std::string secondaryPosition;
-        Player(const std::string& firstName, const std::string& lastName, const int number, const int rating);
+        Player(const std::string& firstName, const std::string& lastName, const int number);
         static std::vector<std::string> randomName();
 
     public:

@@ -7,22 +7,30 @@
 #include <random>
 #include <ctime>
 
+using namespace std;
 
-Player::Player(const std::string& firstName, const std::string& lastName, const int number, const int rating){ 
+
+Player::Player(const std::string& firstName, const std::string& lastName, const int number){ 
     this->firstName = firstName;
     this->lastName = lastName;
     this->number = number;
-    this->rating = rating;
 }
 
 Player Player::CreateNewPlayer(const std::string& firstName, const std::string& lastName, const int number, const int rating){
-    Player newPlayer = Player(firstName, lastName, number, rating);
+    Player newPlayer = Player(firstName, lastName, number);
     return newPlayer;
 }
 
 Player Player::CreateNewPlayer(){
-    std::vector<std::string> name = randomName();
-    Player newPlayer = Player(name[0], name[1], rand() % 100, 50 + rand() % 50);
+    vector<string> name = randomName();
+    Player newPlayer = Player(name[0], name[1], rand() % 100);
+    int sum = 0;
+    for(int i = 0; i < 7; i++){
+        int stat = 50 + rand() % 50;
+        sum += stat;
+        newPlayer.stats[i] = stat;
+    }
+    newPlayer.rating = sum/7;
     return newPlayer;
 }
 
