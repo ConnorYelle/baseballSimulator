@@ -67,3 +67,7 @@ void League::listTeams(){
     }
 }
 
+Team League::playGame(Team homeTeam, Team awayTeam){
+    
+}
+

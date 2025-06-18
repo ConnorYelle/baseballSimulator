@@ -11,4 +11,5 @@ class League{
         League();
         League(int teamNumber);
         void listTeams();
+        Team playGame(Team homeTeam, Team awayTeam);
 };

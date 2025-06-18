@@ -5,6 +5,7 @@
 #include "Player.hpp"
 #include "Team.hpp"
 #include "League.hpp"
+#include "field.cpp"
 using namespace std;
 
 int main() {
@@ -12,7 +13,6 @@ int main() {
     cout << "===========================================================================\n";
     cout << "                     WELCOME TO BASEBALL SIM 2025\n";
     cout << "===========================================================================\n";
-
     bool selection = false;
     char command;
     while(selection == false){
